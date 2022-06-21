@@ -8,32 +8,13 @@
    grid-template-columns: 2fr 10fr;
    grid-gap: 10px;
 }
-.img{
-  height: 40px;
-}
-.header{
-  grid-area:header;
-  margin: 0 10px;
 
-  font-size: 50px;
-  background-color: rgba(86, 180, 192, 0.365);
-}  
-.nav{
-  grid-area:nav;
-  margin: 10px;
- 
-  font-size: 40px;
-  background-color: rgba(28, 98, 79, 0.558);
-  min-height:90vh ;
-}
+
 .conten{
+  /* це стилі для основного поля */
   grid-area:conten;
   margin: 10px;
   
   font-size: 30px;
   background-color: rgba(218, 174, 62, 0.502);
-}
-.img-con{
-  height: 400px;
-  width:80vh;
 }

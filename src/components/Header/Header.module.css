@@ -1,0 +1,10 @@
+.img{
+    height: 40px;
+  }
+  .header{
+    grid-area:header;
+    margin: 0 10px;
+  
+    font-size: 50px;
+    background-color: rgba(86, 180, 192, 0.365);
+  }  

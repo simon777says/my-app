@@ -1,11 +1,11 @@
 import React from "react";
-
+import css from "./Profile.module.css";
 
 const Profile = () => {
    return <div className="conten">
         <div>
           <img
-            className="img-con"
+            className={css.img}
             src="https://www.pixelstalk.net/wp-content/uploads/2016/08/Nature-HD-2560-x-1440-Image.jpg"
           />
         </div>
