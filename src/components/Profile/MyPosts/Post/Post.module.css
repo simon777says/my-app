@@ -1,0 +1,12 @@
+.post{
+    height: 400px;
+    width:80vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    color: rgb(3, 61, 142);
+    background-color: aquamarine;
+  }
+  .ava{
+    height: 60px;
+    border-radius: 50%;
+  }

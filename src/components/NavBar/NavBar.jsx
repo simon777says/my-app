@@ -2,7 +2,8 @@ import React from "react";
 import css from "./NavBar.module.css"
 
 const NavBar = () => {
-   return <div className={css.nav}>
+    return (
+        <div className={css.nav}>
         <div>
             <a>Profile</a>
         </div>
@@ -19,6 +20,6 @@ const NavBar = () => {
             <br />
             <a>Setings</a>
         </div>
-    </div>
+    </div> )
 };
 export default NavBar;

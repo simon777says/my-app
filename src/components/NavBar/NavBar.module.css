@@ -1,8 +1,8 @@
 .nav{
     grid-area:nav;
     margin: 10px;
-   
     font-size: 40px;
     background-color: rgba(28, 98, 79, 0.558);
     min-height:90vh ;
+    padding: 10px;
   }
