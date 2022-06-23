@@ -2,7 +2,7 @@ import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
 import css from "./Profile.module.css";
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className="conten">
         <div>
