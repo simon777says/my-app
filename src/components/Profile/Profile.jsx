@@ -4,7 +4,7 @@ import css from "./Profile.module.css";
 
 const Profile = (props) => {
   return (
-    <div className="conten">
+    <div >
         <div>
           <img
             className={css.img}
