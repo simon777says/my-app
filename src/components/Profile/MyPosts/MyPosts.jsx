@@ -2,21 +2,25 @@ import React from "react";
 import css from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
+
+
 const MyPosts = (props) => {
+ let postsElement=  props.posts.map(p=><Post message={p.message} />);
+ let newPost=React.createRef();
+let addPost= ()=>{
+    let text=newPost.current.value
+    alert(text)
+};
   return (
     <div className={css.myPost}>
           my posts,
-          
+        
       <div>
-        <input/>
-      <button>new post</button>  
+       <textarea ref={newPost} ></textarea>
+      <button onClick={addPost} >new post</button>
       </div>
-      <Post message='hi' />
-      <Post message='good morning'/>
-      <Post message='ddddsfagxc'/>
-      <Post message='hizzgsa'/>
-      <Post message='hi'/>
-      <Post message='hi'/>
+        {postsElement}
+
     </div>   
 )};
 export default MyPosts;

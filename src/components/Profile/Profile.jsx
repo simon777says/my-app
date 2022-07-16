@@ -17,8 +17,9 @@ const Profile = (props) => {
           discription
         </div>
         <br />
-        <MyPosts/>
+        <MyPosts posts={props.posts}  />
     </div>
 )
 };
 export default Profile;
+{/*state={props.state.posts}*/}

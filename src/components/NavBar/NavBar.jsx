@@ -12,6 +12,9 @@ const NavBar = (props) => {
                 <NavLink  className = { navData => navData.isActive ? css.active : css.item } to = "/dialogs" >Messges</NavLink>
             </div>
             <div >
+                <NavLink   to ="/friends" className = { navData => navData.isActive ? css.active : css.item }>Friends</NavLink>
+            </div>
+            <div >
                 <NavLink   to ="/news" className = { navData => navData.isActive ? css.active : css.item }>News</NavLink>
             </div>
             <div >

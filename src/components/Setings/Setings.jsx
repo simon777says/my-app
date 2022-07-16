@@ -1,11 +1,11 @@
 import React from "react";
 import css from "./Setings.module.scss"
 
-const Setings = (props) => {
+const Seting = (props) => {
     return (
         <div className={css.setings}>
             Setings
         </div>
     )
 };
-export default Setings;
+export default Seting;
