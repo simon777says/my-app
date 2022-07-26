@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar/NavBar";
 import News from "./components/News/News";
 import Profile from "./components/Profile/Profile";
 import Seting from "./components/Setings/Setings";
+import {updateNewPostText} from "./state";
 
 function App(props) {
   return (
@@ -22,7 +23,7 @@ function App(props) {
           <Routes>
             <Route
               path="/profile"
-              element={<Profile posts={props.state.profilePage.posts} />}
+              element={<Profile updateNewPostText={props.updateNewPostText} newPostText={props.state.profilePage.newPostText} posts={props.state.profilePage.posts} addPost={props.addPost} />}
             />
             <Route
               path="/dialogs"

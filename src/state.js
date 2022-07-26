@@ -1,3 +1,4 @@
+import {rerenderEntireTee} from "./rerender";
 
 /** @format */
 
@@ -9,7 +10,9 @@ profilePage:{ posts:[
         {id:4,message:'privit' },
         {id:5,message:'hiiii' },
         {id:6,message:'salam' },
-    ],},
+    ],
+newPostText:'',
+},
 
 
     messagesPage: {
@@ -30,4 +33,20 @@ profilePage:{ posts:[
         ],},
 
 };
+  export let addPost = () => {
+    let newPost = {
+        id:7,
+        message: state.profilePage.newPostText,
+    }
+      state.profilePage.posts.push(newPost);
+      state.profilePage.newPostText='';
+      rerenderEntireTee(state);
+  };
+
+  export let updateNewPostText =(newText)=>{
+        state.profilePage.newPostText=newText;
+
+      rerenderEntireTee(state);
+  }
+
 export default state;

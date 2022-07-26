@@ -5,15 +5,26 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
-    let dio = props.dialog.map(d=><Dialog name={d.name} />)
-    let mes=props.message.map(m=><Message messag={m.messag} />)
-    return (
-        <div className={css.dialogs}>
-            <div className={css.dialog}>
-                {dio}
+    let dio = props.dialog.map(d => <Dialog name={d.name}/>)
+    let mes = props.message.map(m => <Message messag={m.messag}/>)
+    let newMessage = React.createRef();
+    let addNewMessage = () => {
+        let text = newMessage.current.value
+        alert(text)
+    }
+    return (<div>
+            <div className={css.dialogs}>
+                <div className={css.dialog}>
+                    {dio}
+                </div>
+                <div className={css.items}>
+                    {mes}
+                </div>
+
             </div>
-            <div className={css.items}>
-                {mes}
+            <div className={css.text}>
+                <textarea ref={newMessage} className={css.area}> </textarea>
+                <button onClick={addNewMessage} >Add</button>
             </div>
         </div>
     )
