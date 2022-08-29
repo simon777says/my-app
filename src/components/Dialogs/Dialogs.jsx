@@ -1,30 +1,35 @@
 import React from "react";
 import Dialog from "./Dialog/Dialog";
 import css from "./Dialogs.module.scss"
-import Message from "./Message/Message";
+import Message from "./Message/Message";    
 
+import { updateNewMessageBodyAC,sendMessageAC } from "./../../store/dialogsReduser"
 const Dialogs = (props) => {
 
-    let dio = props.dialog.map(d => <Dialog name={d.name}/>)
-    let mes = props.message.map(m => <Message messag={m.messag}/>)
-    let newMessage = React.createRef();
-    let addNewMessage = () => {
-        let text = newMessage.current.value
-        alert(text)
+    let dialogsElements = props.dialog.map(d => <Dialog name={d.name}/>)
+    let messagesElements = props.message.map(m => <Message messag={m.messag}/>)
+    let newMessageBody = props.newMessageBody;
+    // let newMessage = React.createRef();
+    let   onSendmessageClick   = () => {
+        props.dispatch(sendMessageAC())
+    }
+    let onNewMessageChange = (event) => {    
+        let body = event.target.value;
+        props.dispatch(updateNewMessageBodyAC(body))
     }
     return (<div>
             <div className={css.dialogs}>
                 <div className={css.dialog}>
-                    {dio}
+                    {dialogsElements}
                 </div>
                 <div className={css.items}>
-                    {mes}
+                    {messagesElements}
                 </div>
 
             </div>
             <div className={css.text}>
-                <textarea ref={newMessage} className={css.area}> </textarea>
-                <button onClick={addNewMessage} >Add</button>
+                <div><textarea placeholder="enter your message" onChange={onNewMessageChange}   value={newMessageBody} className={css.area} > </textarea></div>
+              <div> <button onClick={onSendmessageClick}  >Add</button></div> 
             </div>
         </div>
     )

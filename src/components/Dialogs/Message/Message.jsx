@@ -5,7 +5,7 @@ import css from "./Message.module.scss"
 const Message = (props) => {
     return (
         <div className={css.dialog}>
-            <div>sdffgg</div>
+            <div></div>
             <div>{props.messag }</div>
         </div>
     )
