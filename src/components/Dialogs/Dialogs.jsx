@@ -4,9 +4,9 @@ import css from "./Dialogs.module.scss"
 import Message from "./Message/Message";
 const   Dialogs = (props) => {
 
-    let dialogsElements = props.dialog.map((d, index) => <Dialog name={d.name} key={index} />)
+    let dialogsElements = props.dialog.map((d , index) => <Dialog name={d.name} key={index} />)
     
-    let messagesElements = props.message.map((m,index) => <Message messag={m.messag} key={index}/>)
+    let messagesElements = props.message.map((m , index) => <Message messag={m.messag} key={index}/>)
     
     let newMessageBody = React.createRef();
     

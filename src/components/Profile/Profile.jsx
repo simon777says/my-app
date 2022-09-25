@@ -2,7 +2,7 @@ import React from "react";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import css from "./Profile.module.scss";
 
-const Profile = (props) => {
+const Profile = () => {
 
   return (
     <div >
@@ -18,8 +18,20 @@ const Profile = (props) => {
           discription
         </div>
         <br />
-        <MyPostsContainer store={props.store} />
+        <MyPostsContainer  />
     </div>
 )
 };
 export default Profile;
+
+
+
+
+
+
+
+
+
+
+
+
