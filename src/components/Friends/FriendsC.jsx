@@ -15,7 +15,7 @@ class FriendsC extends React.Component {
       
     {this.props.users.map(u =>
       <div key={u.id} >
-       
+      
             <span>
                 <div>
                     <img className={css.ava} src={u.photos.small !=null ? u.photos.small : ava}/>

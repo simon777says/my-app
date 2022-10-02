@@ -4,7 +4,6 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Friends from "./components/Friends/Friends";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import Header from "./components/Header/Header";
 import Music from "./components/Music/Music";
