@@ -1,11 +1,15 @@
 import React from "react";
 import FriendsC from "./FriendsC";
-import { followAC,setUsersAC,unfollowAC} from "../../store/FriendsReduser";
+import { followAC,setUsersAC,unfollowAC,setCurrentPageAC,setTotalUsersCountAC} from "../../store/FriendsReduser";
 import { connect } from "react-redux";
 
 let mapStateToProps = (state) => {
     return {
-        users: state.frendsPage.users
+        users: state.frendsPage.users,
+        pageSize:state.frendsPage.pageSize,
+        totalUsersCount:state.frendsPage.totalUsersCount,
+        currentPage:state.frendsPage.currentPage,
+        
 }
  };
 let mapDispatchToProps = (dispatch) => {
@@ -18,6 +22,12 @@ let mapDispatchToProps = (dispatch) => {
         },
         setUsers: (users) => {
             dispatch(setUsersAC (users))
+        },
+        setCurrentPage:(pageNumber) => {
+            dispatch ( setCurrentPageAC(pageNumber));
+        },
+        setTotalUsersCount:(totalCount) => {
+            dispatch ( setTotalUsersCountAC(totalCount));
         }
     }
 };
