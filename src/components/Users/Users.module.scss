@@ -13,8 +13,15 @@
     background-color: rgb(4, 99, 134);
   }
   .selected{
-    background-color: bisque;
+    background-color: rgba(6, 199, 64, 0.781);
     border-radius: 30%;
-    height: 30px;
     padding: 1px;
   }
+.pages{
+  //background-color: rgb(26, 143, 127);
+  // margin: 10px;
+  button{
+    border-radius: 40%;
+    margin:2px;
+  }
+}
