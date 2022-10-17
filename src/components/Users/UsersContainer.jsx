@@ -1,5 +1,5 @@
 import React from "react";
-import { followAC,setUsersAC,toggleIsFetchingAC,unfollowAC,setCurrentPageAC,setTotalUsersCountAC} from "../../store/UsersReduser";
+import { follow,setUsers,toggleIsFetching,unfollow,setCurrentPage,setTotalUsersCount} from "../../store/UsersReduser";
 import { connect } from "react-redux";
 import Users from "./Users";
 import Preloader from "../universal/Preloder/Preloder";
@@ -55,27 +55,27 @@ let mapStateToProps = (state) => {
         
 }
  };
-let mapDispatchToProps = (dispatch) => {
-    return {
-        follow: (userId) => {
-            dispatch(followAC(userId))
-        },
-        unfollow: (userId) => {
-            dispatch(unfollowAC(userId))
-        },
-        setUsers: (users) => {
-            dispatch(setUsersAC (users))
-        },
-        setCurrentPage:(pageNumber) => {
-            dispatch ( setCurrentPageAC(pageNumber));
-        },
-        setTotalUsersCount:(totalCount) => {
-            dispatch ( setTotalUsersCountAC(totalCount));
-        },
-        toggleIsFetching:(isFetching) => {
-          dispatch (toggleIsFetchingAC(isFetching));
-      },
-    }
-};
-const FriendsContainer= connect( mapStateToProps,mapDispatchToProps,)(UsersC);
+// let mapDispatchToProps = (dispatch) => {
+//     return {
+//         : (userId) => {
+//             dispatch(followAC(userId))
+//         },
+//         : (userId) => {
+//             dispatch(unfollowAC(userId))
+//         },
+//         : (users) => {
+//             dispatch(setUsersAC (users))
+//         },
+//         :(pageNumber) => {
+//             dispatch ( setCurrentPageAC(pageNumber));
+//         },
+//         :(totalCount) => {
+//             dispatch ( setTotalUsersCountAC(totalCount));
+//         },
+//         t:(isFetching) => {
+//           dispatch (toggleIsFetchingAC(isFetching));
+//       },
+//     }
+// };
+const FriendsContainer= connect( mapStateToProps,{follow,unfollow,setUsers,setCurrentPage,setTotalUsersCount,toggleIsFetching,})(UsersC);
 export default FriendsContainer;
