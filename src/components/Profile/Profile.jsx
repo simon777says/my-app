@@ -1,8 +1,12 @@
 import React from "react";
+import Preloader from "../universal/Preloder/Preloder";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 import css from "./Profile.module.scss";
 
-const Profile = () => {
+const Profile = (props) => {
+if (!props.profile){
+  return<Preloader/>
+}
 
   return (
     <div >
@@ -13,7 +17,7 @@ const Profile = () => {
           />
         </div>
         <div>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRljZkkRywYKrvWq89YZZ6bZFWoOu9_b_vCgA&usqp=CAU" />
+          <img src={props.profile.photos.large} />
           <br />
           discription
         </div>

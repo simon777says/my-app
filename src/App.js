@@ -9,8 +9,9 @@ import Header from "./components/Header/Header";
 import Music from "./components/Music/Music";
 import NavBar from "./components/NavBar/NavBar";
 import News from "./components/News/News";
-import Profile from "./components/Profile/Profile";
+
 import Seting from "./components/Setings/Setings";
+import ProfileContainer from "./components/Profile/MyPosts/ProfileContainer";
 
 function App(props) {
   return (
@@ -20,7 +21,9 @@ function App(props) {
         <NavBar />
         <div className="conten">
           <Routes>
-            <Route path="/profile" element={<Profile />} />
+            <Route path='/profile/:userId'element={<ProfileContainer  />}
+/>
+<Route path="/profile/" element={<ProfileContainer/>}/>
             <Route path="/dialogs" element={<DialogsContainer />} />
             <Route path="/friends" element={<UsersContainer />} />
             <Route path="/news" element={<News />} />
