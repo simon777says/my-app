@@ -1,10 +1,16 @@
 .img{
+  padding: 10px;
     height: 40px;
   }
   .header{
+    display:flex;
+justify-content:space-between;
     grid-area:header;
     margin: 0 10px;
   
-    font-size: 50px;
+    font-size: 40px;
     background-color: rgba(86, 180, 192, 0.365);
   }  
+  .login{
+    padding: 0 5px;
+  }
