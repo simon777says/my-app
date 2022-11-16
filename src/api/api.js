@@ -13,6 +13,12 @@ export const userAPI={
           }).then(response =>{
             return response.data;
           })
-    } 
+    } ,
+    unfollow(userId){
+     return instanse.delete(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+    },
+    follow(userId){
+    return  instanse.post(`https://social-network.samuraijs.com/api/1.0/follow/${userId}`)
+    },
 }
 
